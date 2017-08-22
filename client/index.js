@@ -1,17 +1,13 @@
+/**
+ * 上下文是父组件向它的后代组件传值的一种方式
+ **/
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  HashRouter as Router,
-  Route
-} from 'react-router-dom';
-import Home from "./containers/Home/index";
-import Login from "./containers/Login/index";
+import GrandFather from "./components/GrandFather";
+
 
 ReactDOM.render(
-  <Router>
-    <div>
-      <Route exact={true} path="/" component={Home}/>
-      <Route path="/login" component={Login}/>
-    </div>
-  </Router>,document.querySelector('#root')
+  <GrandFather>
+
+  </GrandFather>,document.querySelector('#root')
 );
